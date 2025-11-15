@@ -1,0 +1,163 @@
+/* ------------------ COLOR & FONT VARIABLES ------------------ */
+:root {
+  --green: #3cb371;
+  --yellow: #ffda63;
+  --brown: #8d6748;
+  --light-bg: #f7f4ed;
+  --white: #ffffff;
+  --text-dark: #1e1e1e;
+
+  --font-title: 'Montserrat', Arial, sans-serif;
+  --font-body: 'Open Sans', Arial, sans-serif;
+}
+
+/* ------------------ GLOBAL RESET ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background: linear-gradient(135deg, var(--green), var(--light-bg));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-dark);
+}
+
+/* ------------------ HEADER ------------------ */
+header {
+  text-align: center;
+  padding: 1rem;
+}
+
+.project-title {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: var(--brown);
+}
+
+/* ------------------ HERO SECTION ------------------ */
+.hero {
+  background: rgba(255,255,255,0.85);
+  border-radius: 1.2rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 3px 18px rgba(0,0,0,0.08);
+}
+
+.hero-bg-img {
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+/* ------------------ BUTTONS ------------------ */
+.cta-btn, .secondary-btn {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  border-radius: 2rem;
+  color: var(--white);
+  transition: 0.25s;
+}
+
+.cta-btn {
+  background: linear-gradient(90deg, var(--green), var(--yellow));
+}
+
+.secondary-btn {
+  background: var(--green);
+}
+
+.cta-btn:hover, .secondary-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ------------------ ABOUT SECTION ------------------ */
+.about, .prediction, .logout-section {
+  background: var(--white);
+  border-radius: 1rem;
+  max-width: 750px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.about h2, .prediction h2 {
+  font-family: var(--font-title);
+  margin-bottom: 1rem;
+}
+
+/* ------------------ FILE UPLOAD ------------------ */
+.file-label {
+  display: block;
+  margin-top: 1.2rem;
+  font-weight: 600;
+  color: var(--green);
+}
+
+input[type="file"] {
+  margin-top: 0.6rem;
+  padding: 0.4rem;
+  border: 1px solid #aaa;
+  border-radius: 0.4rem;
+}
+
+/* ------------------ RESULT DISPLAY ------------------ */
+.output {
+  margin-top: 2rem;
+  background: var(--light-bg);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.output img {
+  width: 150px;
+  border-radius: 0.6rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.error-msg {
+  color: #c62828;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+/* ------------------ FOOTER ------------------ */
+footer {
+  text-align: center;
+  margin-top: auto;
+  padding: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media (max-width: 600px) {
+  .project-title { font-size: 1.5rem; }
+  .hero, .about, .prediction, .logout-section {
+    padding: 1.2rem;
+  }
+}
